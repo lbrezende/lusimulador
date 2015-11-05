@@ -1,0 +1,255 @@
+/*#######################################################################
+  
+  Leandro Rezende
+  http://www.inkmustache.com
+  http://www.leandrorezende.com.br
+
+  //Css is organized in General, Responsiveness and Hacks
+
+  0. Global
+  1. Buttons
+  2. Forms
+  3. Tables
+  4. Menu
+
+  100. Reponsiveness
+
+  101. xs eXtra Small screens - max 767px
+  102. sm Small screens - between 768px and 991px
+  103. md Medium screens - between 992px and 1199px
+  104. lg Large screens - min 1200px
+
+  200. Hacks    
+
+  Available Google fonts Open Sans 300 (light) 400 (regular) and 700 (bold)
+  Call to action <a href="" class="btn btn-warning">Quero Comprar <span class="glyphicon glyphicon-share-alt"></span></a>
+
+  #######################################################################*/
+
+/*#######################################################################
+  0. Global
+#######################################################################*/
+
+body{
+  background:#dce7eb;
+  font-family: 'open sans';
+}
+
+.container {
+  background: #FFF;
+  border-top: solid #243555 10px;
+  margin-top:80px;
+  margin-bottom:80px;  
+}
+
+.logoHeader {
+  text-align:center;
+  padding-top:30px;
+}
+
+.titleHeader {
+
+}
+
+.emailLine {
+  background: #f3ca30;
+  color: white;
+  padding: 10px 10px 20px 10px;
+  text-align: center;
+}
+
+.box-valor {
+  background: white; 
+  box-shadow: 1px 1px 1px #ccc;
+  text-align: center;
+}
+.box-valor h3 {
+  text-align: center;
+}
+.box-valor h5 {
+  text-align: center;
+}
+
+.box-valor {
+  padding:10px;
+  margin-bottom: 10px
+}
+
+
+
+
+/*#######################################################################
+  1. Buttons
+#######################################################################*/
+
+
+/*#######################################################################
+  2. Forms
+#######################################################################*/
+
+/*#######################################################################
+  3. Tables
+#######################################################################*/
+
+
+
+/*#######################################################################
+  4. Menu 
+  Customização do menu do boostrap
+#######################################################################*/
+
+.navbar {
+  margin-top:20px;
+}
+
+.navbar-nav {
+  background: none;
+  border:0px;
+  background: none !important;
+}
+
+.menuSimulador {
+  margin-bottom: 20px;
+}
+
+.menuSimulador ul{
+  color: white;
+  font-size: 16px;
+  border:0px;
+  width: 100%
+
+}
+
+.menuSimulador ul li a{
+  color: #FFF;
+  border-right:4px solid white;
+  padding: 25px 0px;
+  text-align: center;
+
+}
+
+.menuSimulador ul li{
+  background: #f3ca30;
+  width: 16.666666%;
+
+}
+
+.menuSimulador ul li:hover{
+  color: #000;
+
+}
+
+.menuSimulador ul li.active a{
+  color: #fff;
+  background: #f3ca30 !improtant;
+
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color:#fff;
+  font-weight: bold;
+  background: #f3ca30;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color:#000;
+}
+
+.navbar-default {
+  background: #f3ca30;
+  color: white;
+}
+
+.navbar-brand{
+  color: white !important;
+}
+
+.navbar-header {
+  color: white !important;
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle {
+  background: white;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+  color: white;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+  border: 0px;
+}
+
+#navbar {
+   margin-top:30px;
+}
+
+.navbar-collapse {
+  padding: 0px;
+}
+
+
+
+/*#######################################################################
+  100. Responsiveness
+#######################################################################*/
+
+/*101. xs eXtra Small screens*/
+@media (max-width: 767px) { 
+
+  .container {
+    margin-top:0px;
+  }
+
+
+  .logoHeader img {
+    max-width: 100%; 
+    padding:10px;
+    text-align: center;
+  }
+
+  .titleHeader img {
+    max-width: 100%; 
+    padding:10px;
+    text-align: center;
+  }
+
+  .menuSimulador ul li a {
+    border: 0px;
+  }
+
+  .navbar-header {
+    margin-top:30px;
+  }
+
+  #navbar {
+    margin-top: 0px;
+  }
+
+  .menuSimulador ul li{
+    background: #f3ca30;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    text-align: left;
+  }
+
+
+}
+/*102. sm Small screens - between 768px and 991px*/
+@media (min-width: 768px) and (max-width: 991px) {
+
+}
+/*103. md Medium screens - between 992px and 1199px*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+}
+/*104. lg Large screens - min 1200px*/
+@media (min-width: 1200px) {
+
+
+}
+
+
+/**************************************************
+* 200. Hacks
+***************************************************/
