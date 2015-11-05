@@ -1,5 +1,5 @@
 <?php 
-    function gerarTabelaEmail($valorFinanciado, $prazoPagamento, $taxaJurosMensal) {
+    function gerarTabelaEmail($valorFinanciado, $prazoPagamento, $taxaJurosMensal, $prazoCarencia) {
             $linhasTabelaEmail = null; 
             $linhaTabela = null;
             $tabelaemail=null;
@@ -50,18 +50,26 @@
 
             $saldoInicial = $valorFinanciado;
 
-            for ($i=1; $i <= $prazoPagamento ; $i++) { 
+            for ($i=1; $i <= ($prazoPagamento + $prazoCarencia) ; $i++) { 
 
                 //Valores fixos de acordo com entrada de dados     
                 $parcela = $i;                                              
                 $amortizacao = $valorFinanciado / $prazoPagamento;
 
-                //Valores calculados
-                $juros = $saldoInicial * $taxaJurosMensal;
-                $saldoAtualizado = $saldoInicial + $juros;
-                $prestacao = $juros + $amortizacao;
-                $saldoDevedor = $saldoAtualizado - $prestacao; 
+                if ($i<=$prazoCarencia) {
+                    $juros = $saldoInicial * $taxaJurosMensal;
+                    $saldoAtualizado = $saldoInicial;
+                    $prestacao = $juros;
+                    $saldoDevedor = $saldoAtualizado; 
+                }
 
+                if ($i>$prazoCarencia) { 
+                    //Valores calculados
+                    $juros = $saldoInicial * $taxaJurosMensal;
+                    $saldoAtualizado = $saldoInicial + $juros;
+                    $prestacao = $juros + $amortizacao;
+                    $saldoDevedor = $saldoAtualizado - $prestacao; 
+                }  
                
 
                 $linhaTabela = '
