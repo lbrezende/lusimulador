@@ -452,6 +452,8 @@
 
                                 <input type="hidden" name="taxaJurosMensal" class="form-control" value="<?php echo $taxaJurosMensal; ?>">
 
+                                <input type="hidden" name="prazoCarencia" class="form-control" value="<?php echo $prazoCarencia; ?>">
+
                             </div>
 
                             <br class="visible-xs visible-sm" /><br class="visible-xs visible-sm" />
@@ -509,6 +511,8 @@
                                 <input type="hidden" name="prazoPagamento" class="form-control" value="<?php echo $prazoPagamento; ?>">
 
                                 <input type="hidden" name="taxaJurosMensal" class="form-control" value="<?php echo $taxaJurosMensal; ?>">
+
+                                <input type="hidden" name="prazoCarencia" class="form-control" value="<?php echo $prazoCarencia; ?>">
 
                             </div>
 
